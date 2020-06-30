@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    android:padding="0dp"
+    tools:context=".ItemQuantityActivity">
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="215dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="52dp"
+        android:paddingLeft="20sp"
+        android:text="Vadapav"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addToCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E64A19"
+        android:onClick="addToCart"
+        android:text="Add to Cart"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="54dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="15dp"
+        android:background="#FFA000"
+        android:fontFamily="sans-serif-black"
+        android:onClick="minus"
+        android:padding="5sp"
+        android:shadowRadius="10"
+        android:text="-"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/qty"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="-" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="54dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="16dp"
+        android:background="#F57C00"
+        android:fontFamily="sans-serif-black"
+        android:onClick="plus"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/qty"
+        android:layout_width="23dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="12dp"
+        android:background="#00FFFFFF"
+        android:clickable="false"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/plus"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="0"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>
